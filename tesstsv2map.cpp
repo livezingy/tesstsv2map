@@ -1,3 +1,16 @@
+/* --------------------------------------------------------
+* author: livezingy
+*
+* BLOG: livezingy.com
+*
+* Development Environment:
+*      Visual Studio V2019
+*      opencv4.3
+*
+* Version:
+*      V1.0    20201026
+--------------------------------------------------------- */
+
 #include "tesstsv2map.h"
 #include "tesseract\baseapi.h"
 #include "leptonica\allheaders.h"
