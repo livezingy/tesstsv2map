@@ -11,6 +11,7 @@ Convert the tsv ouput of the tesseract to map in C++. Then we could get the Tess
 3. Call the function tsv2map in our test file like this. There are five parameters in tsv2map:
 ```
 std::map<std::string, std::vector<std::string>> tsvResults = tsv2map(testImg,1,"eng","tesseract-5.0\\tessdata\\eng/",12);
+
 /*
 std::map<std::string, std::vector<std::string>> tsv2map(cv::Mat tessImage, int magnifiRatio,const char* lang, const char* langPath,int psmVal)
    
@@ -30,14 +31,23 @@ int psmVal: the PSM setting value.
 
 ```
 string level = results["level"][i];//get level of index i
+
 string block_num = results["block_num"][i];//get block_num of index i
+
 string page_num = results["page_num"][i];//get page_num  of index i
+
 string par_num = results["par_num"][i];//get par_num  of index i
+
 string line_num = results["line_num"][i];//get line_num  of index i
+
 string word_num = results["word_num"][i];//get word_num  of index i
+
 string left = results["left"][i]; string top = results["top"][i];//the left-top corner of the OCR word coordinates
+
 string width = results["width"][i]; string height = results["height"][i];//the width and height of the OCR word coordinates
+
 string conf = results["conf"][i];//get the confidence of the OCR word.
+
 string text = results["text"][i];//get the OCR word.
 ```
 
