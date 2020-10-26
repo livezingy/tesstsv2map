@@ -25,7 +25,6 @@ using namespace cv;
  magnifiRatio: image magnification Sometimes enlarge the image may get better results, especially the small dpi image.
  lang: the language of the tesseract
  langPath: the language path of the tesseract
- psmVal: the PSM setting value
   
 Output: 
 std::map<std::string, std::vector<std::string>> result
@@ -39,7 +38,7 @@ results["left"][i], results["top"][i], results["width"][i], results["height" ][i
 results["conf"][i] to get the confidence of the OCR word.
 results["text"][i] to get the OCR word.
 */
-std::map<std::string, std::vector<std::string>> tsv2map(cv::Mat tessImage, int magnifiRatio,const char* lang, const char* langPath,int psmVal)
+std::map<std::string, std::vector<std::string>> tsv2map(cv::Mat tessImage, int magnifiRatio,const char* lang, const char* langPath)
 {   
     tesseract::TessBaseAPI *ocrObj;
 	map<string, vector<string>> result;
@@ -48,11 +47,7 @@ std::map<std::string, std::vector<std::string>> tsv2map(cv::Mat tessImage, int m
 	if (ocrObj->Init(langPath, lang) == -1)
 	{
 		return result;
-	}
-	
-	ocrObj->SetPageSegMode(tesseract::PSM_SPARSE_TEXT);
-	
-	
+	}	
 
 	if (tessImage.data != NULL)
 	{
