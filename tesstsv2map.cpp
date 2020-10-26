@@ -30,12 +30,14 @@ using namespace cv;
 Output: 
 std::map<std::string, std::vector<std::string>> result
 results["level"][i]     get level
+results["block_num"][i]  get block_num
 results["page_num"][i]  get page_num
 results["par_num"][i]   get par_num
 results["line_num"][i]  get line_num
 results["word_num"][i]  get word_num
 results["left"][i], results["top"][i], results["width"][i], results["height" ][i],the coordinates of the upper left corner, width and height.
-results["text"][i] to get the text
+results["conf"][i] to get the confidence of the OCR word.
+results["text"][i] to get the OCR word.
 */
 std::map<std::string, std::vector<std::string>> tsv2map(cv::Mat tessImage, int magnifiRatio,const char* lang, const char* langPath,int psmVal)
 {   
