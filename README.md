@@ -10,7 +10,7 @@ Convert the tsv ouput of the tesseract to map in C++. Then we could get the Tess
 ```
 3. Call the function tsv2map in our test file like this. There are four parameters in tsv2map:
 ```
-std::map<std::string, std::vector<std::string>> tsvResults = tsv2map(testImg,1,"eng","tesseract-5.0\\tessdata\\eng/");
+std::map<std::string, std::vector<std::string>> results = tsv2map(testImg,1,"eng","tesseract-5.0\\tessdata\\eng/");
 
 /*
 std::map<std::string, std::vector<std::string>> tsv2map(cv::Mat tessImage, int magnifiRatio,const char* lang, const char* langPath)
