@@ -48,15 +48,6 @@ string conf = results["conf"][i];//get the confidence of the OCR word.
 
 string text = results["text"][i];//get the OCR word.
 ```
-   
-# More Information
-
-[C++ implementation of image_to_data in pytesseract](https://livezingy.com/pytesseract_image_to_data_c/)
-
-[pytesseract image_to_data](https://livezingy.com/pytesseract-image_to_data_locate_text/)
-
-[pytesseract image_to_osd](https://livezingy.com/pytesseract-image_to_osd-orientation-and-script-detection/)
-
 
 
 
